@@ -12,7 +12,6 @@ import me.Jishnu.CreeperSpawn.Main;
 
 public class CreeperCommand implements CommandExecutor {
     private Main plugin;
-	private Player sender;
      
     public CreeperCommand(Main plugin) {
     	this.plugin = plugin;
@@ -20,10 +19,10 @@ public class CreeperCommand implements CommandExecutor {
     } 
     
 	@Override
-	public boolean onCommand(CommandSender arg0, Command arg1, String arg2, String[] arg3) {
-		Player p = (Player) sender;
-		Location loc = p.getLocation();
-		World w = p.getWorld();
+	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+		Player player = (Player) sender;
+		Location loc = player.getLocation();
+		World w = player.getWorld();
 		for(int i = 0; i < 10; i++) {
 			w.spawnEntity(loc, EntityType.CREEPER);
 		}
