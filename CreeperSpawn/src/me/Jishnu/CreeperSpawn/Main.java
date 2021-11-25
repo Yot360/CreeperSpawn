@@ -7,6 +7,6 @@ public class Main extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-		new CreeperCommand(this);
+		this.getCommand("creepspawn").setExecutor(new CreeperCommand());
 	}
 }

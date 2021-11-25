@@ -11,13 +11,6 @@ import org.bukkit.World;
 import me.Jishnu.CreeperSpawn.Main;
 
 public class CreeperCommand implements CommandExecutor {
-    private Main plugin;
-     
-    public CreeperCommand(Main plugin) {
-    	this.plugin = plugin;
-    	plugin.getCommand("creepspawn").setExecutor(this);
-    } 
-    
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		Player player = (Player) sender;
@@ -26,21 +19,7 @@ public class CreeperCommand implements CommandExecutor {
 		for(int i = 0; i < 10; i++) {
 			w.spawnEntity(loc, EntityType.CREEPER);
 		}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+
 		return false;
 	}
      
